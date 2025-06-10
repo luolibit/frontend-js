@@ -46,12 +46,11 @@
             }
  
             try {
-                const resultado = await verificarNomeRepositorioDisponivel(nome);
+                const resultado = await verificarNomeRepositorioDisponivel(nome, minhaChamada);
  
                 if(minhaChamada === chamadaAtual){
                     output.innerHTML += `${resultado}<br>`;
                 }
-                output.innerHTML += `${resultado}<br>`
             } catch (erro){
                 if ( minhaChamada === chamadaAtual){
                     output.innerHTML += `${erro}<br>`;
